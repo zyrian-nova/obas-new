@@ -9,6 +9,9 @@ export default {
 				serif: ['Radley', ...defaultTheme.fontFamily.serif],
 				sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
 			},
+			colors: {
+				mostaza: "#ceb257"
+			}
 		},
 	},
 	plugins: [],
