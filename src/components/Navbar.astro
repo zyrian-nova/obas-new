@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import logoWhite from "../imgs/obas-logo-white.svg";
+---
+
+<nav
+    class="fixed z-10 top-0 flex items-center bg-[#ceb257] bg-opacity-0 transition-all duration-300 ease-in-out -translate-x-1/2 left-1/2 w-full justify-center"
+    id="navbar"
+>
+    <div class="flex space-x-6 text-white font-medium">
+        <a href="#" class="relative group">
+            <span>CUARTOS</span>
+            <span
+                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+            ></span>
+        </a>
+        <a href="#" class="relative group">
+            <span>EXPLORA</span>
+            <span
+                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+            ></span>
+        </a>
+        <a href="#" class="relative group">
+            <span>RESTAURANT</span>
+            <span
+                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+            ></span>
+        </a>
+    </div>
+    <div class="bg-blue-800 p-4 mx-6">
+        <Image src={logoWhite} alt="Logo Obas" class="w-28" />
+    </div>
+    <div class="flex space-x-6 text-white">
+        <a href="#" class="relative group">
+            <span>SPA</span>
+            <span
+                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+            ></span>
+        </a>
+        <a href="#" class="relative group">
+            <span>ACERCA DE</span>
+            <span
+                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+            ></span>
+        </a>
+        <a href="#" class="relative group">
+            <span>RESERVA AHORA</span>
+            <span
+                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+            ></span>
+        </a>
+    </div>
+</nav>
+
+<script>
+    window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        const scrollPosition = window.scrollY;
+
+        if (!navbar) return;
+
+        if (scrollPosition > 270) {
+            navbar.classList.add("bg-opacity-100");
+            navbar.classList.remove("bg-opacity-0");
+        } else {
+            navbar.classList.remove("bg-opacity-100");
+            navbar.classList.add("bg-opacity-0");
+        }
+    });
+</script>
