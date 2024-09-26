@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
 import Button from "../components/ui/Button.astro";
@@ -14,9 +15,13 @@ import imgD from "../imgs/cuadro-adorno.png";
 	<section class="mt-32 px-4 md:px-16">
 		<div class="block xl:flex gap16 justify-between">
 			<div>
-				<h1 class="font-serif text-blue-600 text-7xl">Your home</h1>
+				<h1
+					class="font-serif text-blue-600 text-7xl tracking-widest font-bold"
+				>
+					Your home
+				</h1>
 				<div class="ml-8 max-w-full xl:max-w-lg 2xl:max-w-2xl -mt-1">
-					<h1 class="font-thin text-5xl">AWAY FROM HOME</h1>
+					<h1 class="font-thin text-5xl mt-1">AWAY FROM HOME</h1>
 					<p class="my-5">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Mauris elementum dolor libero. Nam vitae fermentum
@@ -61,11 +66,13 @@ import imgD from "../imgs/cuadro-adorno.png";
 				<div
 					class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full text-center"
 				>
-					<h1 class="font-serif text-blue-600 text-7xl">
+					<h1
+						class="font-serif text-blue-600 text-7xl tracking-widest font-bold"
+					>
 						Experience
 					</h1>
 					<div class="ml-8">
-						<h1 class="font-thin text-5xl">OF A LIFETIME</h1>
+						<h1 class="font-thin text-5xl mt-1">OF A LIFETIME</h1>
 						<p class="my-5 text-center w-4/6 mx-auto">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Mauris elementum dolor libero.
@@ -73,6 +80,140 @@ import imgD from "../imgs/cuadro-adorno.png";
 						<Button>Explore the country</Button>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="mt-32 px-4 md:px-16">
+		<div class="block xl:flex gap16 justify-between">
+			<div>
+				<h1
+					class="font-serif text-blue-600 text-7xl font-bold tracking-widest"
+				>
+					Satisfy
+				</h1>
+				<div class="ml-8 max-w-full xl:max-w-lg 2xl:max-w-2xl -mt-1">
+					<h1 class="font-thin text-5xl mt-1">YOUR TASTEBUDS</h1>
+					<p class="my-5">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Mauris elementum dolor libero. Nam vitae fermentum
+						velit. Integer at mi in nulla venenatis eleifend. Nunc
+						suscipit, nunc et aliquet auctor, odio tortor semper
+						lectus, in pretium nisi diam sed urna. Aenean mattis mi
+						eget leo congue, ut ullamcorper nulla dignissim. Morbi
+						dictum dolor eu mauris convallis, sit amet malesuada
+						purus accumsan.
+					</p>
+					<Button>The restaurant</Button>
+				</div>
+			</div>
+			<div
+				class="hidden xl:block bg-mostaza w-full xl:w-1/2 h-96 2xl:h-[500px] mt-8 xl:-mt-8 relative"
+			>
+				<Image
+					src={imgA}
+					alt="Foto 01"
+					class="z-10 w-1/3 absolute bottom-12 -left-10"
+				/>
+				<Image
+					src={imgB}
+					alt="Foto 02"
+					class="w-5/6 xl:w-full absolute top-12 -left-4"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<section class="mt-32 px-16">
+		<div class="flex justify-center items-center">
+			<div
+				class="hidden xl:block bg-mostaza w-full xl:w-1/2 h-96 2xl:h-[500px] mt-8 xl:-mt-8 relative"
+			>
+				<Image
+					src={imgA}
+					alt="Foto 01"
+					class="z-10 w-1/3 absolute bottom-12 -left-10"
+				/>
+				<Image
+					src={imgB}
+					alt="Foto 02"
+					class="w-5/6 xl:w-full absolute top-12 -left-4"
+				/>
+			</div>
+			<div class="ml-16 relative">
+				<Image src={imgD} alt="Imagen texto 01" />
+				<div
+					class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full text-center"
+				>
+					<h1
+						class="font-serif text-blue-600 text-7xl tracking-widest font-bold"
+					>
+						Relax
+					</h1>
+					<div class="ml-8">
+						<h1 class="font-thin text-5xl mt-1">IN OUR SPA</h1>
+						<p class="my-5 text-center w-4/6 mx-auto">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. Mauris elementum dolor libero.
+						</p>
+						<Button>View services</Button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-amber-200 pt-8 pb-16">
+		<div class="flex max-w-7xl mx-auto justify-between items-center">
+			<ul class="border-l-4 border-amber-500 pl-16 py-1 space-y-6">
+				<li>
+					<h5 class="font-semibold">Ubicación</h5>
+					<div>Domicilio</div>
+					<div>Ciudad</div>
+				</li>
+				<li>
+					<h5 class="font-semibold">Ubicación</h5>
+					<div>Domicilio</div>
+					<div>Ciudad</div>
+				</li>
+				<li>
+					<h5 class="font-semibold">Ubicación</h5>
+					<div>Domicilio</div>
+					<div>Ciudad</div>
+				</li>
+			</ul>
+			<div>
+				<div class="flex flex-col space-y-2">
+					<Button>View our rooms</Button>
+					<Button>Reserva ahora</Button>
+				</div>
+				<div class="flex justify-center gap-3 mt-5">
+					<Icon name="facebook" class="text-blue-600" size={24} />
+					<Icon name="x" class="text-blue-600" size={24} />
+					<Icon name="instagram" class="text-blue-600" size={24} />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="mt-32">
+		<h1 class="text-5xl font-thin text-center">WHY CHOOSE US</h1>
+		<div class="flex justify-center items-center mt-5">
+			<div class="border-r border-gray-400 pr-32 py-8">
+				<div class="text-9xl text-amber-400 text-center">1</div>
+				<h3 class="uppercase font-medium mt-8 text-center">Location</h3>
+			</div>
+			<div class="ml-8 border-r border-gray-400 pr-8 py-8">
+				<div class="text-9xl text-amber-400 text-center">2</div>
+				<h3 class="uppercase font-medium mt-8 text-center max-w-80">EXCLUSIVE INTERIOR DESIGN</h3>
+			</div>
+			<div class="ml-8 border-r border-gray-400 pr-8 py-8">
+				<div class="text-9xl text-amber-400 text-center">3</div>
+				<h3 class="uppercase font-medium mt-8 text-center max-w-80">IN-HOUSE RESTAURANT</h3>
+			</div>
+			<div class="ml-8 py-8">
+				<div class="text-9xl text-amber-400 text-center">4</div>
+				<h3 class="uppercase font-medium mt-8 text-center max-w-80">SPA SERVICES</h3>
 			</div>
 		</div>
 	</section>
