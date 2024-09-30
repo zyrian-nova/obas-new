@@ -1,10 +1,11 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import logoWhite from "../imgs/obas-logo-white.svg";
 ---
 
 <nav
-    class="fixed z-20 top-0 flex items-center bg-mostaza bg-opacity-0 transition-all duration-300 ease-in-out -translate-x-1/2 left-1/2 w-full justify-start md:justify-center"
+    class="fixed z-20 top-0 hidden md:flex items-center bg-mostaza bg-opacity-0 transition-all duration-300 ease-in-out -translate-x-1/2 left-1/2 w-full justify-start md:justify-center"
     id="navbar"
 >
     <div class="hidden md:flex space-x-6 text-white font-medium">
@@ -50,6 +51,15 @@ import logoWhite from "../imgs/obas-logo-white.svg";
             ></span>
         </a>
     </div>
+</nav>
+
+<!-- Navbar movil -->
+<nav class="fixed h-16 bg-mostaza w-full md:hidden z-20">
+    <div class="bg-blue-600 p-4 md:mx-6 w-fit">
+        <Image src={logoWhite} alt="Logo Obas" class="w-20" />
+    </div>
+
+    <Icon name="menu-bar" class="text-neutral-800 absolute top-4 right-4" size={32} />
 </nav>
 
 <script>
