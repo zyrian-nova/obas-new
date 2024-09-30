@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import Button from "./ui/Button.astro";
 ---
 
 <div class="relative min-h-screen flex flex-col justify-center items-center">
@@ -10,7 +11,7 @@ import { Icon } from "astro-icon/components";
 
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black bg-opacity-50 -z-10"></div>
-    <div class="text-white mt-auto pt-64">
+    <div class="text-white lg:mt-auto pt-96">
         <h1
             class="text-center tracking-[0.2em] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium font-serif"
         >
@@ -19,22 +20,20 @@ import { Icon } from "astro-icon/components";
     </div>
 
     <div
-        class="flex flex-col justify-center items-center w-full px-4 text-white mt-auto"
+        class="flex flex-col justify-center items-center w-full px-4 text-white mt-64"
     >
         <p
-            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center max-w-4xl mx-auto mb-64"
+            class="text-4xl text-center max-w-4xl mx-auto mb-52 hidden lg:block"
         >
             YOUR PERFECT PLACE OF COMFORT AND BEAUTY IN THE HEART OF MEXICO IS
             ALWAYS AT YOUR SERVICE.
         </p>
-        <h4
-            class="uppercase text-lg sm:text-xl"
-        >
-            Discover
-        </h4>
+
+        <div class="mb-16"><Button variant="outline">Reserva ahora</Button></div>
+        <h4 class="uppercase text-xl hidden lg:block">Discover</h4>
         <Icon
             name="arrow-down"
-            class="mt-4 sm:mt-6 md:mt-8 lg:mt-10 mb-8 hover:-translate-y-4 transition-transform cursor-pointer"
+            class="mt-10 mb-8 hover:-translate-y-4 transition-transform cursor-pointer hidden lg:block"
             size={60}
         />
     </div>

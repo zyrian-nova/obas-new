@@ -1,8 +1,8 @@
 ---
-
+const { variant = "default" } = Astro.props;
 ---
 
 <button
-    class="bg-amber-500 uppercase py-4 px-12 text-xs font-bold hover:bg-opacity-70"
+    class={`uppercase py-4 px-12 text-xs font-bold hover:bg-opacity-70 ${variant === "default" ? "bg-amber-500 border-none text-neutral-900" : "bg-transparent border-2 border-white text-white hover:bg-amber-500 transition-all hover:border-transparent hover:text-neutral-900"}`}
     ><slot />
 </button>
