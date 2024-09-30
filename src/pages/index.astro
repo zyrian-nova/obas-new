@@ -3,12 +3,12 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
 import Button from "../components/ui/Button.astro";
 import imgA from "../imgs/seccion-01.png";
 import imgB from "../imgs/seccion-02.png";
 import imgC from "../imgs/seccion-03.png";
 import imgD from "../imgs/cuadro-adorno.png";
-import logoWhite from "../imgs/obas-logo-white.svg";
 ---
 
 <MainLayout>
@@ -30,7 +30,7 @@ import logoWhite from "../imgs/obas-logo-white.svg";
 						Disfruta del diseño moderno, completamente amueblado y
 						equipado para ti. Disfruta tu estancia.
 					</p>
-					<Button>Explore the rooms</Button>
+					<Button>Conócenos</Button>
 				</div>
 			</div>
 			<div
@@ -82,11 +82,11 @@ import logoWhite from "../imgs/obas-logo-white.svg";
 						<p
 							class="mt-2 sm:my-5 text-center w-full lg:w-4/6 mx-auto"
 						>
-							Explora el encanto de nuestras habitaciones tipo
-							loft. Disfruta del diseño moderno, completamente
-							amueblado y equipado para ti.
+							Desde interiores elegantes, hasta vistas panorámicas
+							de la ciudad, cada loft ofrece una experiencia más
+							allá de un hotel tradicional.
 						</p>
-						<Button>Explore the country</Button>
+						<Button>Explora Obas</Button>
 					</div>
 				</div>
 			</div>
@@ -269,49 +269,5 @@ import logoWhite from "../imgs/obas-logo-white.svg";
 		</div>
 	</section>
 
-	<div class="bg-amber-300 h-6 w-full"></div>
-	<footer class="bg-amber-200 pt-32 sm:pt-52 pb-16 relative px-8 lg:px-0">
-		<div
-			class="block sm:flex max-w-7xl mx-auto justify-between items-center"
-		>
-			<ul
-				class="border-l-4 border-amber-500 pl-8 sm:pl-16 py-1 space-y-6"
-			>
-				<li>
-					<h5 class="font-semibold">Ubicación</h5>
-					<div>Girasol 239</div>
-					<div>Tepic, Nayarit</div>
-				</li>
-				<li>
-					<h5 class="font-semibold">Email</h5>
-					<div>reservaciones.obas@macopron.com</div>
-				</li>
-				<li>
-					<h5 class="font-semibold">Teléfonos</h5>
-					<div>+(52) 322 118 4312</div>
-					<div>+(52) 311 226 0098</div>
-				</li>
-			</ul>
-			<div>
-				<div class="mt-8 sm:mt-0 flex flex-col space-y-2">
-					<Button>Cuartos</Button>
-					<Button>Reserva ahora</Button>
-				</div>
-				<div class="flex justify-center gap-3 mt-5">
-					<Icon name="facebook" class="text-blue-600" size={24} />
-					<Icon name="x" class="text-blue-600" size={24} />
-					<Icon name="instagram" class="text-blue-600" size={24} />
-				</div>
-			</div>
-		</div>
-
-		<div
-			class="bg-blue-600 p-4 md:mx-6 absolute -top-24 left-1/2 -translate-x-1/2"
-		>
-			<Image src={logoWhite} alt="Logo Obas" class="w-36 sm:w-48" />
-		</div>
-	</footer>
-	<p class="text-sm my-2 text-center text-gray-600">
-		© 2024 Todos los derechos reservados | OBAS | Powered by Michicode
-	</p>
+	<Footer />
 </MainLayout>

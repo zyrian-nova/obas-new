@@ -1,0 +1,170 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import Button from "../../components/ui/Button.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import imgA from "../../imgs/seccion-01.png";
+import imgB from "../../imgs/seccion-02.png";
+import imgDirector from "../../imgs/director.png";
+import imgPartner from "../../imgs/partner.png";
+import imgPartner2 from "../../imgs/partner-2.png";
+import Footer from "../../components/Footer.astro";
+---
+
+<MainLayout>
+    <div class="relative h-96">
+        <h1
+            class="text-center text-white tracking-[0.2em] text-5xl md:text-7xl font-medium font-serif mt-16 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
+        >
+            Acerca de
+        </h1>
+        <div
+            class="absolute inset-0 bg-cover bg-center -z-10 bg-[url('https://i.ibb.co/h7m5Khz/header.png')] bg-fixed"
+        >
+        </div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 -z-10"></div>
+    </div>
+    <div class="bg-amber-200 h-6 w-full"></div>
+
+    <section class="mt-16 sm:mt-32 px-4 md:px-16">
+        <div class="block sm:flex gap-16 sm:justify-between">
+            <div class="w-full sm:w-1/2">
+                <h1
+                    class="font-serif text-blue-600 text-5xl sm:text-7xl tracking-widest font-bold"
+                >
+                    Our mission
+                </h1>
+                <div class="ml-8 -mt-1">
+                    <h1 class="font-thin text-3xl sm:text-5xl mt-1 uppercase">
+                        Our vision
+                    </h1>
+                    <p class="my-5">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris elementum dolor libero. Nam vitae fermentum
+                        velit. Integer at mi in nulla venenatis eleifend. Nunc
+                        suscipit, nunc et aliquet auctor, odio tortor semper
+                        lectus, in pretium nisi diam sed urna. Aenean mattis mi
+                        eget leo congue, ut ullamcorper nulla dignissim. Morbi
+                        dictum dolor eu mauris convallis, sit amet malesuada
+                        purus accumsan. Etiam et accumsan eros.
+                    </p>
+                    <Button>Reserva ahora</Button>
+                </div>
+            </div>
+            <div
+                class="bg-mostaza w-3/4 ml-auto mt-8 h-96 sm:h-auto sm:ml-16 sm:w-1/3 sm:-mt-8 relative"
+            >
+                <Image
+                    src={imgA}
+                    alt="Foto 01"
+                    class="z-10 w-full lg:w-1/3 absolute bottom-12 -left-10"
+                />
+                <Image
+                    src={imgB}
+                    alt="Foto 02"
+                    class="w-full absolute top-4 sm:top-12 -left-4"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-32">
+        <h2
+            class="font-serif text-blue-600 text-center text-5xl tracking-widest font-semibold"
+        >
+            Meet our team
+        </h2>
+        <p class="mt-5 max-w-3xl mx-auto text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            elementum dolor libero. Nam vitae fermentum velit. Integer at mi in
+            nulla venenatis eleifend. Nunc suscipit, nunc et aliquet auctor,
+            odio tortor semper lectus, in pretium nisi diam sed urna.
+        </p>
+
+        <div class="flex gap-4 justify-center mt-16">
+            <div class="border border-gray-300 pb-8">
+                <Image src={imgDirector} alt="Imagen director" class="w-96" />
+                <h3 class="uppercase text-lg text-center mt-5">ED JOHNSON</h3>
+                <h4 class="uppercase text-base text-amber-400 text-center">
+                    Managing director
+                </h4>
+
+                <p class="mt-2 max-w-56 mx-auto text-center">
+                    Mr. Johnson is the founder and CEO of the company.
+                </p>
+                <div class="flex justify-center gap-3 mt-5">
+                    <Icon name="facebook" class="text-amber-400" size={24} />
+                    <Icon name="x" class="text-amber-400" size={24} />
+                    <Icon name="instagram" class="text-amber-400" size={24} />
+                </div>
+            </div>
+            <div class="border border-gray-300 pb-8">
+                <Image src={imgPartner} alt="Imagen director" class="w-96" />
+                <h3 class="uppercase text-lg text-center mt-5">ED JOHNSON</h3>
+                <h4 class="uppercase text-base text-amber-400 text-center">
+                    Managing director
+                </h4>
+
+                <p class="mt-2 max-w-56 mx-auto text-center">
+                    Mr. Johnson is the founder and CEO of the company.
+                </p>
+                <div class="flex justify-center gap-3 mt-5">
+                    <Icon name="facebook" class="text-amber-400" size={24} />
+                    <Icon name="x" class="text-amber-400" size={24} />
+                    <Icon name="instagram" class="text-amber-400" size={24} />
+                </div>
+            </div>
+            <div class="border border-gray-300 pb-8">
+                <Image src={imgPartner2} alt="Imagen director" class="w-96" />
+                <h3 class="uppercase text-lg text-center mt-5">ED JOHNSON</h3>
+                <h4 class="uppercase text-base text-amber-400 text-center">
+                    Managing director
+                </h4>
+
+                <p class="mt-2 max-w-56 mx-auto text-center">
+                    Mr. Johnson is the founder and CEO of the company.
+                </p>
+                <div class="flex justify-center gap-3 mt-5">
+                    <Icon name="facebook" class="text-amber-400" size={24} />
+                    <Icon name="x" class="text-amber-400" size={24} />
+                    <Icon name="instagram" class="text-amber-400" size={24} />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-32 mb-52">
+        <h2
+            class="font-serif text-blue-600 text-center text-5xl tracking-widest font-semibold"
+        >
+            Contact Us Today
+        </h2>
+        <form
+            class="mt-8 flex flex-col justify-center items-center w-1/3 mx-auto"
+        >
+            <div class="flex gap-5 justify-center w-full">
+                <input
+                    placeholder="Nombre"
+                    class="border border-gray-300 py-1.5 px-4 w-full"
+                />
+                <input
+                    placeholder="Nombre"
+                    class="border border-gray-300 py-1.5 px-4 w-full"
+                />
+                <input
+                    placeholder="Nombre"
+                    class="border border-gray-300 py-1.5 px-4 w-full"
+                />
+            </div>
+            <textarea
+                class="border border-gray-300 py-1.5 px-4 mt-5 w-full"
+                rows={3}
+                placeholder="Mensaje"></textarea>
+
+            <div class="mt-8"><Button type="submit">Enviar</Button></div>
+        </form>
+    </section>
+
+    <Footer />
+</MainLayout>
