@@ -1,9 +1,11 @@
 ---
+const currentPath = Astro.url.pathname;
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import logoWhite from "../imgs/obas-logo-white.svg";
 ---
 
+<!-- Navbar para escritorio -->
 <nav
     class="fixed z-20 top-0 hidden md:flex items-center bg-mostaza bg-opacity-0 transition-all duration-300 ease-in-out -translate-x-1/2 left-1/2 w-full justify-start md:justify-center"
     id="navbar"
@@ -12,13 +14,17 @@ import logoWhite from "../imgs/obas-logo-white.svg";
         <a href="/cuartos" class="relative group">
             <span>CUARTOS</span>
             <span
-                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+                class={`absolute inset-x-0 top-7 h-0.5 bg-white transform ${
+                    currentPath === "/cuartos" ? "scale-x-100" : "scale-x-0"
+                } origin-center transition-transform duration-150 ease-out group-hover:scale-x-100`}
             ></span>
         </a>
-        <a href="#" class="relative group">
+        <a href="/explora" class="relative group">
             <span>EXPLORA</span>
             <span
-                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+                class={`absolute inset-x-0 top-7 h-0.5 bg-white transform ${
+                    currentPath === "/explora" ? "scale-x-100" : "scale-x-0"
+                } origin-center transition-transform duration-150 ease-out group-hover:scale-x-100`}
             ></span>
         </a>
     </div>
@@ -31,13 +37,17 @@ import logoWhite from "../imgs/obas-logo-white.svg";
         <a href="/acerca-de" class="relative group">
             <span>ACERCA DE</span>
             <span
-                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+                class={`absolute inset-x-0 top-7 h-0.5 bg-white transform ${
+                    currentPath === "/acerca-de" ? "scale-x-100" : "scale-x-0"
+                } origin-center transition-transform duration-150 ease-out group-hover:scale-x-100`}
             ></span>
         </a>
         <a href="/reserva" class="relative group">
             <span>RESERVA AHORA</span>
             <span
-                class="absolute inset-x-0 top-7 h-0.5 bg-white transform scale-x-0 origin-center transition-transform duration-150 ease-out group-hover:scale-x-100"
+                class={`absolute inset-x-0 top-7 h-0.5 bg-white transform ${
+                    currentPath === "/reserva" ? "scale-x-100" : "scale-x-0"
+                } origin-center transition-transform duration-150 ease-out group-hover:scale-x-100`}
             ></span>
         </a>
     </div>
@@ -49,12 +59,54 @@ import logoWhite from "../imgs/obas-logo-white.svg";
         <Image src={logoWhite} alt="Logo Obas" class="w-20" />
     </div>
 
-    <Icon
-        name="menu-bar"
-        class="text-neutral-800 absolute top-4 right-4"
-        size={32}
-    />
+    <button id="menu-toggle" class="absolute top-4 right-4">
+        <Icon name="menu-bar" class="text-neutral-800" size={32} />
+    </button>
 </nav>
+
+<!-- Sidebar -->
+<div
+    id="sidebar"
+    class="fixed top-0 right-0 h-full w-64 bg-white text-gray-600 transform translate-x-full transition-transform duration-300 ease-in-out z-30"
+>
+    <button id="close-sidebar" class="absolute top-4 right-4 text-6xl">
+        &times;
+    </button>
+    <div class="p-6 mt-16 space-y-4">
+        <a href="/cuartos" class="block relative group py-2 text-lg w-fit">
+            <span>CUARTOS</span>
+            <span
+                class={`absolute inset-x-0 top-8 h-0.5 bg-gray-600 transform ${
+                    currentPath === "/cuartos" ? "scale-x-100" : "scale-x-0"
+                } origin-left transition-transform duration-150 ease-out group-hover:scale-x-100`}
+            ></span>
+        </a>
+        <a href="/explora" class="block relative group py-2 text-lg w-fit">
+            <span>EXPLORA</span>
+            <span
+                class={`absolute inset-x-0 top-8 h-0.5 bg-gray-600 transform ${
+                    currentPath === "/explora" ? "scale-x-100" : "scale-x-0"
+                } origin-left transition-transform duration-150 ease-out group-hover:scale-x-100`}
+            ></span>
+        </a>
+        <a href="/acerca-de" class="block relative group py-2 text-lg w-fit">
+            <span>ACERCA DE</span>
+            <span
+                class={`absolute inset-x-0 top-8 h-0.5 bg-gray-600 transform ${
+                    currentPath === "/acerca-de" ? "scale-x-100" : "scale-x-0"
+                } origin-left transition-transform duration-150 ease-out group-hover:scale-x-100`}
+            ></span>
+        </a>
+        <a href="/reserva" class="block relative group py-2 text-lg w-fit">
+            <span>RESERVA AHORA</span>
+            <span
+                class={`absolute inset-x-0 top-8 h-0.5 bg-gray-600 transform ${
+                    currentPath === "/reserva" ? "scale-x-100" : "scale-x-0"
+                } origin-left transition-transform duration-150 ease-out group-hover:scale-x-100`}
+            ></span>
+        </a>
+    </div>
+</div>
 
 <script>
     window.addEventListener("scroll", () => {
@@ -71,4 +123,19 @@ import logoWhite from "../imgs/obas-logo-white.svg";
             navbar.classList.add("bg-opacity-0");
         }
     });
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+    const closeSidebar = document.getElementById("close-sidebar");
+
+    if (menuToggle && sidebar && closeSidebar) {
+        menuToggle.addEventListener("click", () => {
+            sidebar.classList.toggle("translate-x-full");
+            sidebar.classList.toggle("translate-x-0");
+        });
+
+        closeSidebar.addEventListener("click", () => {
+            sidebar.classList.add("translate-x-full");
+        });
+    }
 </script>

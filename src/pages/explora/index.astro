@@ -1,0 +1,157 @@
+---
+import { Icon } from "astro-icon/components";
+import Image from "astro/components/Image.astro";
+import Button from "../../components/ui/Button.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import Footer from "../../components/Footer.astro";
+import imgA from "../../imgs/seccion-01.png";
+import imgB from "../../imgs/seccion-02.png";
+---
+
+<MainLayout>
+    <div class="relative h-96">
+        <h1
+            class="shadow-md text-center text-white tracking-[0.2em] text-5xl md:text-7xl font-medium font-serif mt-16 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
+        >
+            explora
+        </h1>
+        <div
+            class="absolute inset-0 bg-cover bg-center -z-10 bg-[url('/images/header-acerca-de.png')] bg-fixed"
+        >
+        </div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 -z-10"></div>
+    </div>
+    <div class="bg-amber-200 h-6 w-full"></div>
+
+    <section class="my-16 md:my-32 px-0 md:px-16">
+        <div class="block md:flex justify-center mx-auto">
+            <div class="bg-mostaza mt-8 xl:-mt-8 relative mx-auto w-[250px] h-24 sm:w-[350px] sm:h-32 md:h-auto md:w-[600px]">
+                <Image
+                    src={imgB}
+                    alt="Foto 02"
+                    class="w-full absolute -top-8 -left-4"
+                />
+            </div>
+            <div class="ml-0 md:ml-32 w-full lg:w-4/6 max-w-3xl px-4 md:px-0">
+                <h2
+                    class="font-serif text-blue-600 text-4xl lg:text-5xl tracking-widest font-bold mt-8 md:mt-0"
+                >
+                    New Title Here
+                </h2>
+                <p class="mt-2 sm:my-5">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris elementum dolor libero. Nam vitae fermentum velit.
+                    Integer at mi in nulla venenatis eleifend. Nunc suscipit,
+                    nunc et aliquet auctor, odio tortor semper lectus, in
+                    pretium nisi diam sed urna. Aenean mattis mi eget leo
+                    congue, ut ullamcorper nulla dignissim. Morbi dictum dolor
+                    eu mauris convallis, sit amet malesuada purus accumsan.
+                    Etiam et accumsan eros.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-28 px-4 md:px-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-24 mx-auto w-max">
+            <div class="text-center w-80">
+                <div
+                    class="border border-amber-300 w-fit mx-auto p-8 rounded-full mb-6"
+                >
+                    <Icon name="clock" class="text-amber-300" size={42} />
+                </div>
+                <h3 class="uppercase text-xl mb-2">title goes here</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris elementum dolor libero. Nam vitae fermentum velit.
+                    Integer at mi in nulla venenatis eleifend.
+                </p>
+            </div>
+            <div class="text-center w-80">
+                <div
+                    class="border border-amber-300 w-fit mx-auto p-8 rounded-full mb-6"
+                >
+                    <Icon name="clock" class="text-amber-300" size={42} />
+                </div>
+                <h3 class="uppercase text-xl mb-2">title goes here</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris elementum dolor libero. Nam vitae fermentum velit.
+                    Integer at mi in nulla venenatis eleifend.
+                </p>
+            </div>
+            <div class="text-center w-80">
+                <div
+                    class="border border-amber-300 w-fit mx-auto p-8 rounded-full mb-6"
+                >
+                    <Icon name="clock" class="text-amber-300" size={42} />
+                </div>
+                <h3 class="uppercase text-xl mb-2">title goes here</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris elementum dolor libero. Nam vitae fermentum velit.
+                    Integer at mi in nulla venenatis eleifend.
+                </p>
+            </div>
+            <div class="text-center w-80">
+                <div
+                    class="border border-amber-300 w-fit mx-auto p-8 rounded-full mb-6"
+                >
+                    <Icon name="clock" class="text-amber-300" size={42} />
+                </div>
+                <h3 class="uppercase text-xl mb-2">title goes here</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris elementum dolor libero. Nam vitae fermentum velit.
+                    Integer at mi in nulla venenatis eleifend.
+                </p>
+            </div>
+            <div class="text-center w-80">
+                <div
+                    class="border border-amber-300 w-fit mx-auto p-8 rounded-full mb-6"
+                >
+                    <Icon name="clock" class="text-amber-300" size={42} />
+                </div>
+                <h3 class="uppercase text-xl mb-2">title goes here</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris elementum dolor libero. Nam vitae fermentum velit.
+                    Integer at mi in nulla venenatis eleifend.
+                </p>
+            </div>
+            <div class="text-center w-80">
+                <div
+                    class="border border-amber-300 w-fit mx-auto p-8 rounded-full mb-6"
+                >
+                    <Icon name="clock" class="text-amber-300" size={42} />
+                </div>
+                <h3 class="uppercase text-xl mb-2">title goes here</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris elementum dolor libero. Nam vitae fermentum velit.
+                    Integer at mi in nulla venenatis eleifend.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full bg-gray-100 pt-20 pb-36">
+        <div class="text-center max-w-4xl mx-auto px-5 md:px-0">
+            <h2
+                class="font-serif text-blue-600 text-4xl lg:text-5xl tracking-widest font-bold mb-4"
+            >
+                Our Features
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                elementum dolor libero. Nam vitae fermentum velit. Integer at mi in
+                nulla venenatis eleifend. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Mauris elementum dolor libero. Nam vitae fermentum
+                velit. Integer at mi in nulla venenatis eleifend.
+            </p>
+        </div>
+    </section>
+
+    <Footer />
+</MainLayout>
