@@ -5,7 +5,7 @@ import Button from "./ui/Button.astro";
 
 <div class="relative min-h-screen flex flex-col justify-center items-center">
     <div
-        class="absolute inset-0 bg-cover bg-center -z-10 bg-[url('/images/hero.jpg')] bg-fixed"
+        class="absolute inset-0 bg-cover bg-center -z-10 bg-[url('/images/mako-01.jpg')] bg-fixed"
     >
     </div>
 
@@ -15,7 +15,7 @@ import Button from "./ui/Button.astro";
         <h1
             class="text-center tracking-[0.2em] text-5xl max-w-80 md:max-w-full md:text-7xl font-medium font-serif"
         >
-            bienvenido a Obas, tu casa.
+            Bienvenido a Obas, tu casa.
         </h1>
     </div>
 
@@ -30,7 +30,9 @@ import Button from "./ui/Button.astro";
         </p>
 
         <div class="mb-16">
-            <Button variant="outline">Reserva ahora</Button>
+            <a href="/reserva">
+                <Button variant="outline">Reserva ahora</Button>
+            </a>
         </div>
         <h4 class="uppercase text-xl hidden lg:block">
             Descubre tu siguiente aventura
