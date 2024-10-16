@@ -1,0 +1,32 @@
+---
+import "photoswipe/style.css"
+
+const { images } = Astro.props;
+---
+
+<div 
+    class="pswp-gallery pswp-gallery--single-column grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4" id="gallery">
+    {images.map((image: { fullSrc: string, thumbnailSrc: string, width: number, height: number }, index: number) => (
+        <a
+            href={image.fullSrc}  
+            data-pswp-src={image.fullSrc}  
+            data-pswp-width={image.width} 
+            data-pswp-height={image.height} 
+            target="_blank"
+        >
+      <img src={image.thumbnailSrc} alt={`Thumbnail ${index + 1}`} class="w-64 md:w-64 lg:w-40 py-1" /> 
+    </a>
+      ))}
+  </div>
+
+<script>
+    import PhotoSwipeLightbox from "photoswipe/lightbox"
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#gallery',
+      children: 'a',
+      pswpModule: () => import('photoswipe'),
+    });
+
+    lightbox.init();
+</script>
