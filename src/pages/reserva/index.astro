@@ -1,8 +1,10 @@
 ---
-import { Icon } from "astro-icon/components";
 import Button from "../../components/ui/Button.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import Footer from "../../components/Footer.astro";
+import { Image } from "astro:assets";
+import imgObas01 from "../../imgs/obas-01.jpg";
+import imgMako54_02 from "../../imgs/mako54-02.jpg";
 ---
 
 <MainLayout>
@@ -22,25 +24,62 @@ import Footer from "../../components/Footer.astro";
     <div class="bg-amber-200 h-6 w-full"></div>
 
     <section class="my-16 sm:my-32">
-        <div class="block flex-col sm:flex justify-center w-full lg:w-2/5 mx-auto gap-16 ">
-            <h2 class="font-serif text-blue-600 text-4xl lg:text-5xl tracking-widest font-bold text-center mt-8 md:mt-0">
-                    Descubre aventuras en Tepic
-            </h2>
-            <div class="flex justify-center gap-2 lg:gap-16">
-                <a href="https://hotels.cloudbeds.com/es/reservation/RG3OL7" target="_blank">
-                    <Button>Mako 235</Button> 
-                </a>
-                <a href="https://hotels.cloudbeds.com/reservation/WEu6yV" target="_blank">
-                    <Button>Mako 519</Button>
-                </a>
+        <div class="block sm:flex gap-16 sm:justify-between">
+            <div class="w-full sm:w-1/2">
+                <h1
+                    class="font-serif text-blue-600 text-5xl sm:text-7xl tracking-widest font-bold"
+                >
+                    Descubre
+                </h1>
+                <div class="ml-8 -mt-1">
+                    <h1 class="font-thin text-3xl sm:text-5xl mt-1 uppercase">
+                        Aventuras en Tepic
+                    </h1>
+                    <div class="flex justify-center gap-2 lg:gap-16 mt-2">
+                        <a href="https://hotels.cloudbeds.com/es/reservation/RG3OL7" target="_blank">
+                            <Button>Mako 235</Button> 
+                        </a>
+                        <a href="https://hotels.cloudbeds.com/reservation/WEu6yV" target="_blank">
+                            <Button>Mako 519</Button>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <h2 class="font-serif text-blue-600 text-4xl lg:text-5xl tracking-widest font-bold text-center mt-8 md:mt-0">
-                Atrévete a explorar Puerto Vallarta
-            </h2>
-            <div class="flex justify-center gap-2 lg:gap-16">
-                <a href="https://hotels.cloudbeds.com/reservation/MPmmBg" target="_blank">
-                    <Button>Mako 54</Button>
-                </a>
+            <div
+                class="bg-mostaza w-3/4 ml-auto mt-8 h-96 sm:h-auto sm:ml-16 sm:w-1/3 sm:-mt-8 relative"
+            >
+                <Image
+                    src={imgMako54_02}
+                    alt="Foto 02"
+                    class="w-full lg:h-72 lg:object-cover object-bottom lg:overflow-hidden absolute top-4 sm:top-12 -left-4"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="my-16 md:my-32 px-0 md:px-16">
+        <div class="block md:flex justify-center mx-auto max-w-[1440px]">
+            <div class="bg-mostaza mt-8 xl:-mt-8 relative mx-auto w-[250px] h-24 sm:w-[350px] sm:h-32 md:h-auto md:w-[600px]">
+                <Image
+                    src={imgObas01}
+                    alt="Foto 02"
+                    class="w-full h-28 md:h-64 xl:96 object-cover object-center overflow-hidden absolute -top-8 -left-4"
+                />
+            </div>
+            <div class="ml-0 md:ml-32 w-full lg:w-4/6 max-w-3xl px-4 md:px-0">
+                <h1
+                    class="font-serif text-blue-600 text-5xl sm:text-7xl tracking-widest font-bold"
+                >
+                    Atrévete
+                </h1>
+                <h1 class="font-thin text-3xl sm:text-5xl mt-1 uppercase">
+                    A explorar Puerto Vallarta
+                </h1>
+                <div class="flex justify-center gap-2 lg:gap-16 mt-2">
+                    <a href="https://hotels.cloudbeds.com/reservation/MPmmBg" target="_blank">
+                        <Button>Mako 54</Button>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
