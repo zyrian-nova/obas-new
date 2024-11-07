@@ -2,6 +2,7 @@
 import Button from "../../components/ui/Button.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import Footer from "../../components/Footer.astro";
+import Gallery from "../../components/Gallery.astro";
 ---
 
 <MainLayout>
@@ -9,7 +10,7 @@ import Footer from "../../components/Footer.astro";
         <h1
             class="shadow-md text-center text-white tracking-[0.2em] text-5xl md:text-7xl font-medium font-serif mt-16 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
         >
-            Cuartos
+            Descubre tu nuevo hogar
         </h1>
         <div
             class="absolute inset-0 bg-cover bg-center -z-10 bg-[url('/images/header-acerca-de.png')] bg-fixed"
@@ -24,86 +25,188 @@ import Footer from "../../components/Footer.astro";
         <div class="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto gap-5 px-4 lg:px-0">
             <div class="border border-gray-300">
                 <div
-                    class="bg-[url('/images/mako-05.jpg')] bg-cover bg-bottom w-full h-64"
+                    class="bg-[url('/images/mako-54.jpg')] bg-cover bg-bottom w-full h-64"
                 >
                 </div>
                 <div class="px-8 pb-16 mt-14">
-                    <h3 class="uppercase text-blue-600 text-2xl">Room one</h3>
+                    <h3 class="uppercase text-blue-600 text-2xl">Mako 54</h3>
                     <h4 class="uppercase font-bold text-base">
-                        1 Bed | 1 Bath
+                        6 Habitaciones
                     </h4>
                     <p class="w-11/12 mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Mauris elementum dolor libero. Nam vitae fermentum
-                        velit. Integer at mi in nulla venenatis eleifend. Nunc
-                        suscipit, nunc et aliquet auctor, odio tortor semper
-                        lectus, in pretium nisi diam sed urna.
+                        A tan sólo unas cuantas cuadras de la playa se encuentra Mako 54, 
+                        rodeado de atractivas propuestas y ubicado en la icónica colonia 5 de Diciembre, 
+                        en Puerto Vallarta.
                     </p>
 
-                    <Button>Reservar ahora</Button>
+                    <a href="https://hotels.cloudbeds.com/reservation/MPmmBg" target="_blank">
+                        <Button>Reservar ahora</Button>
+                    </a>
+                    <!-- Componente de la galería -->
+                    <Gallery 
+                    images={[
+                        { 
+                            fullSrc: "/images/mako54/mako54_g01.jpg", 
+                            thumbnailSrc: "/images/mako54/mako54_t01.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako54/mako54_g02.jpg", 
+                            thumbnailSrc: "/images/mako54/mako54_t02.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako54/mako54_g03.jpg", 
+                            thumbnailSrc: "/images/mako54/mako54_t03.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako54/mako54_g04.jpg", 
+                            thumbnailSrc: "/images/mako54/mako54_t04.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako54/mako54_g05.jpg", 
+                            thumbnailSrc: "/images/mako54/mako54_t05.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako54/mako54_g06.jpg", 
+                            thumbnailSrc: "/images/mako54/mako54_t06.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        }
+                      ]}
+                    />
                 </div>
             </div>
             <div class="border border-gray-300">
                 <div
-                    class="bg-[url('/images/mako-05.jpg')] bg-cover bg-bottom w-full h-64"
+                    class="bg-[url('/images/mako-235.jpg')] bg-cover bg-bottom w-full h-64"
                 >
                 </div>
                 <div class="px-8 pb-16 mt-14">
-                    <h3 class="uppercase text-blue-600 text-2xl">Room one</h3>
+                    <h3 class="uppercase text-blue-600 text-2xl">Mako 235</h3>
                     <h4 class="uppercase font-bold text-base">
-                        1 Bed | 1 Bath
+                        21 Habitaciones
                     </h4>
                     <p class="w-11/12 mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Mauris elementum dolor libero. Nam vitae fermentum
-                        velit. Integer at mi in nulla venenatis eleifend. Nunc
-                        suscipit, nunc et aliquet auctor, odio tortor semper
-                        lectus, in pretium nisi diam sed urna.
+                        Ubicado en el Fracc. Parque Ecológico de Tepic, 
+                        es el lugar ideal para aquellos que buscan un hogar rodeado de naturaleza 
+                        sin renunciar al confort y la modernidad.
                     </p>
 
-                    <Button>Reservar ahora</Button>
+                    <a href="https://hotels.cloudbeds.com/es/reservation/RG3OL7" target="_blank">
+                        <Button>Reservar ahora</Button>
+                    </a>
+                    <!-- Componente de la galería -->
+                    <Gallery 
+                    images={[
+                        { 
+                            fullSrc: "/images/mako235/mako235_g01.jpg", 
+                            thumbnailSrc: "/images/mako235/mako235_t01.jpg",
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako235/mako235_g02.jpg", 
+                            thumbnailSrc: "/images/mako235/mako235_t02.jpg",
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako235/mako235_g03.jpg", 
+                            thumbnailSrc: "/images/mako235/mako235_t03.jpg",
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako235/mako235_g04.jpg", 
+                            thumbnailSrc: "/images/mako235/mako235_t04.jpg",
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako235/mako235_g05.jpg", 
+                            thumbnailSrc: "/images/mako235/mako235_t05.jpg",
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako235/mako235_g06.jpg", 
+                            thumbnailSrc: "/images/mako235/mako235_t06.jpg",
+                            width: 1024, 
+                            height: 768 
+                        }
+                        ]}
+                    />
                 </div>
             </div>
             <div class="border border-gray-300">
                 <div
-                    class="bg-[url('/images/mako-05.jpg')] bg-cover bg-bottom w-full h-64"
+                    class="bg-[url('/images/mako-519.jpg')] bg-cover bg-bottom w-full h-64"
                 >
                 </div>
                 <div class="px-8 pb-16 mt-14">
-                    <h3 class="uppercase text-blue-600 text-2xl">Room one</h3>
+                    <h3 class="uppercase text-blue-600 text-2xl">Mako 519</h3>
                     <h4 class="uppercase font-bold text-base">
-                        1 Bed | 1 Bath
+                        10 Habitaciones
                     </h4>
                     <p class="w-11/12 mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Mauris elementum dolor libero. Nam vitae fermentum
-                        velit. Integer at mi in nulla venenatis eleifend. Nunc
-                        suscipit, nunc et aliquet auctor, odio tortor semper
-                        lectus, in pretium nisi diam sed urna.
+                        Ubicado en Calle Revolución Social #519, en la colonia Menchaca de Tepic, 
+                        Nayarit, se encuentra este inmueble tipo loft equipado para ser tu hogar 
+                        durante tu estancia.
                     </p>
 
-                    <Button>Reservar ahora</Button>
-                </div>
-            </div>
-            <div class="border border-gray-300">
-                <div
-                    class="bg-[url('/images/mako-05.jpg')] bg-cover bg-bottom w-full h-64"
-                >
-                </div>
-                <div class="px-8 pb-16 mt-14">
-                    <h3 class="uppercase text-blue-600 text-2xl">Room one</h3>
-                    <h4 class="uppercase font-bold text-base">
-                        1 Bed | 1 Bath
-                    </h4>
-                    <p class="w-11/12 mb-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Mauris elementum dolor libero. Nam vitae fermentum
-                        velit. Integer at mi in nulla venenatis eleifend. Nunc
-                        suscipit, nunc et aliquet auctor, odio tortor semper
-                        lectus, in pretium nisi diam sed urna.
-                    </p>
-
-                    <Button>Reservar ahora</Button>
+                    <a href="https://hotels.cloudbeds.com/reservation/WEu6yV" target="_blank">
+                        <Button>Reservar ahora</Button>
+                    </a>
+                    <!-- Componente de la galería -->
+                    <Gallery 
+                    images={[
+                        { 
+                            fullSrc: "/images/mako519/mako519_g01.jpg", 
+                            thumbnailSrc: "/images/mako519/mako519_t01.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako519/mako519_g02.jpg", 
+                            thumbnailSrc: "/images/mako519/mako519_t02.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako519/mako519_g03.jpg", 
+                            thumbnailSrc: "/images/mako519/mako519_t03.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako519/mako519_g04.jpg", 
+                            thumbnailSrc: "/images/mako519/mako519_t04.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako519/mako519_g05.jpg", 
+                            thumbnailSrc: "/images/mako519/mako519_t05.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        },
+                        { 
+                            fullSrc: "/images/mako519/mako519_g06.jpg", 
+                            thumbnailSrc: "/images/mako519/mako519_t06.jpg", 
+                            width: 1024, 
+                            height: 768 
+                        }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

@@ -3,10 +3,11 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import Button from "../../components/ui/Button.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-import imgA from "../../imgs/seccion-01.png";
-import imgB from "../../imgs/seccion-02.png";
-import imgDirector from "../../imgs/director.png";
-import imgPartner from "../../imgs/partner.png";
+import imgObas01 from "../../imgs/obas-01.jpg";
+import imgMako54_02 from "../../imgs/mako54-02.jpg";
+import imgMako54_03 from "../../imgs/mako54-03.jpg";
+import imgAgenteTepic from "../../imgs/agenteTepic.png";
+import imgAgenteVallarta from "../../imgs/agenteVallarta.png";
 import imgPartner2 from "../../imgs/partner-2.png";
 import Footer from "../../components/Footer.astro";
 ---
@@ -16,7 +17,7 @@ import Footer from "../../components/Footer.astro";
         <h1
             class="shadow-md text-center text-white tracking-[0.2em] text-5xl md:text-7xl font-medium font-serif mt-16 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"
         >
-            Acerca de
+            Somos Obas
         </h1>
         <div
             class="absolute inset-0 bg-cover bg-center -z-10 bg-[url('/images/header-acerca-de.png')] bg-fixed"
@@ -33,38 +34,58 @@ import Footer from "../../components/Footer.astro";
                 <h1
                     class="font-serif text-blue-600 text-5xl sm:text-7xl tracking-widest font-bold"
                 >
-                    Our mission
+                    Nuestra misión
                 </h1>
                 <div class="ml-8 -mt-1">
                     <h1 class="font-thin text-3xl sm:text-5xl mt-1 uppercase">
-                        Our vision
+                        Proporcionar una opción integral
                     </h1>
                     <p class="my-5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Mauris elementum dolor libero. Nam vitae fermentum
-                        velit. Integer at mi in nulla venenatis eleifend. Nunc
-                        suscipit, nunc et aliquet auctor, odio tortor semper
-                        lectus, in pretium nisi diam sed urna. Aenean mattis mi
-                        eget leo congue, ut ullamcorper nulla dignissim. Morbi
-                        dictum dolor eu mauris convallis, sit amet malesuada
-                        purus accumsan. Etiam et accumsan eros.
+                    A personas y empresas que permita solucionar sus necesidades relacionadas con el alojamiento.
+                    Aportándoles una mayor rentabilidad basada en la responsabilidad y la transparencia.
                     </p>
-                    <Button>Reserva ahora</Button>
                 </div>
             </div>
             <div
                 class="bg-mostaza w-3/4 ml-auto mt-8 h-96 sm:h-auto sm:ml-16 sm:w-1/3 sm:-mt-8 relative"
             >
                 <Image
-                    src={imgA}
+                    src={imgMako54_02}
                     alt="Foto 01"
                     class="z-10 w-full lg:w-1/3 absolute bottom-12 -left-10"
                 />
                 <Image
-                    src={imgB}
+                    src={imgObas01}
                     alt="Foto 02"
-                    class="w-full absolute top-4 sm:top-12 -left-4"
+                    class="w-full lg:h-72 lg:object-cover object-bottom lg:overflow-hidden absolute top-4 sm:top-12 -left-4"
                 />
+            </div>
+        </div>
+    </section>
+
+    <section class="my-16 md:my-32 px-0 md:px-16">
+        <div class="block md:flex justify-center mx-auto max-w-[1440px]">
+            <div class="bg-mostaza mt-8 xl:-mt-8 relative mx-auto w-[250px] h-24 sm:w-[350px] sm:h-32 md:h-auto md:w-[600px]">
+                <Image
+                    src={imgMako54_03}
+                    alt="Foto 02"
+                    class="w-full h-28 md:h-64 xl:96 object-cover object-center overflow-hidden absolute -top-8 -left-4"
+                />
+            </div>
+            <div class="ml-0 md:ml-32 w-full lg:w-4/6 max-w-3xl px-4 md:px-0">
+                <h1
+                    class="font-serif text-blue-600 text-5xl sm:text-7xl tracking-widest font-bold"
+                >
+                    Nuestra visión
+                </h1>
+                <h1 class="font-thin text-3xl sm:text-5xl mt-1 uppercase">
+                    Convertirnos en la empresa de referencia
+                </h1>
+                <p class="mt-2 sm:my-5">
+                    Del sector inmobiliario en Nayarit, con objeto de que las personas que
+                    busquen un lugar para alojarse piensen en nosotros como primera opción de
+                    alojamiento en el momento de visitar Nayarit.
+                </p>
             </div>
         </div>
     </section>
@@ -74,14 +95,12 @@ import Footer from "../../components/Footer.astro";
             <h2
                 class="font-serif text-blue-600 text-center text-4xl sm:text-5xl tracking-widest font-semibold"
             >
-                Meet our team
+                Nuestro equipo
             </h2>
             <p class="mt-5 max-w-3xl mx-auto text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-                elementum dolor libero. Nam vitae fermentum velit. Integer at mi
-                in nulla venenatis eleifend. Nunc suscipit, nunc et aliquet
-                auctor, odio tortor semper lectus, in pretium nisi diam sed
-                urna.
+                Nuestro equipo está formado por profesionales dedicados y apasionados que se
+                esfuerzan por brindar siempre lo mejor. Cada miembro aporta una combinación única de habilidades,
+                experiencia y entusiasmo.
             </p>
         </div>
 
@@ -89,51 +108,37 @@ import Footer from "../../components/Footer.astro";
             class="block space-y-5 sm:space-y-0 sm:flex gap-4 justify-center mt-16 px-8 lg:px-0"
         >
             <div class="border border-gray-300 pb-8">
-                <Image src={imgDirector} alt="Imagen director" class="w-96" />
-                <h3 class="uppercase text-lg text-center mt-5">ED JOHNSON</h3>
+                <Image src={imgAgenteTepic} alt="Imagen director" class="w-96" />
+                <h3 class="uppercase text-lg text-center mt-5">Diana Patricia Pineda Cuautli</h3>
                 <h4 class="uppercase text-base text-amber-400 text-center">
-                    Managing director
+                    Agente de Ventas Tepic
                 </h4>
 
                 <p class="mt-2 max-w-56 mx-auto text-center">
-                    Mr. Johnson is the founder and CEO of the company.
+                    Experta en ventas de atención personalizada.
                 </p>
                 <div class="flex justify-center gap-3 mt-5">
-                    <Icon name="facebook" class="text-amber-400" size={24} />
-                    <Icon name="x" class="text-amber-400" size={24} />
-                    <Icon name="instagram" class="text-amber-400" size={24} />
+                    <a href="https://wa.me/523112260098?text=%C2%A1Hola,%20Diana!%20Quiero%20reservar%20en%20Tepic" target="_blank" class="flex">
+                        <span class="text-xs mt-1 mx-2 text-amber-400">Envíame un mensaje</span>
+                        <Icon name="whatsapp" class="text-amber-400" size={24} />
+                    </a>
                 </div>
             </div>
             <div class="border border-gray-300 pb-8">
-                <Image src={imgPartner} alt="Imagen director" class="w-96" />
-                <h3 class="uppercase text-lg text-center mt-5">ED JOHNSON</h3>
+                <Image src={imgAgenteVallarta} alt="Imagen director" class="w-96" />
+                <h3 class="uppercase text-lg text-center mt-5">Herlinda Flores Medina</h3>
                 <h4 class="uppercase text-base text-amber-400 text-center">
-                    Managing director
+                    Agente de Ventas Vallarta
                 </h4>
 
                 <p class="mt-2 max-w-56 mx-auto text-center">
-                    Mr. Johnson is the founder and CEO of the company.
+                    Especialista en ventas con amplia experiencia.
                 </p>
                 <div class="flex justify-center gap-3 mt-5">
-                    <Icon name="facebook" class="text-amber-400" size={24} />
-                    <Icon name="x" class="text-amber-400" size={24} />
-                    <Icon name="instagram" class="text-amber-400" size={24} />
-                </div>
-            </div>
-            <div class="border border-gray-300 pb-8">
-                <Image src={imgPartner2} alt="Imagen director" class="w-96" />
-                <h3 class="uppercase text-lg text-center mt-5">ED JOHNSON</h3>
-                <h4 class="uppercase text-base text-amber-400 text-center">
-                    Managing director
-                </h4>
-
-                <p class="mt-2 max-w-56 mx-auto text-center">
-                    Mr. Johnson is the founder and CEO of the company.
-                </p>
-                <div class="flex justify-center gap-3 mt-5">
-                    <Icon name="facebook" class="text-amber-400" size={24} />
-                    <Icon name="x" class="text-amber-400" size={24} />
-                    <Icon name="instagram" class="text-amber-400" size={24} />
+                    <a href="https://wa.me/523221184312?text=%C2%A1Hola,%20Herlinda!%20Quiero%20reservar%20en%20Vallarta" target="_blank" class="flex">
+                        <span class="text-xs mt-1 mx-2 text-amber-400">Envíame un mensaje</span>
+                        <Icon name="whatsapp" class="text-amber-400" size={24} />
+                    </a>
                 </div>
             </div>
         </div>
@@ -143,9 +148,9 @@ import Footer from "../../components/Footer.astro";
         <h2
             class="font-serif text-blue-600 text-center text-4xl sm:text-5xl tracking-widest font-semibold"
         >
-            Contact Us Today
+            ¡Contáctanos!
         </h2>
-        <form
+        <!-- <form
             class="mt-8 flex flex-col justify-center items-center w-full px-4 sm:px-0 sm:w-3/4 lg:w-1/3 mx-auto"
         >
             <div
@@ -170,7 +175,7 @@ import Footer from "../../components/Footer.astro";
                 placeholder="Mensaje"></textarea>
 
             <div class="mt-8"><Button type="submit">Enviar</Button></div>
-        </form>
+        </form> -->
     </section>
 
     <Footer />

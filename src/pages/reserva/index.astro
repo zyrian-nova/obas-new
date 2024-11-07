@@ -1,8 +1,10 @@
 ---
-import { Icon } from "astro-icon/components";
 import Button from "../../components/ui/Button.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 import Footer from "../../components/Footer.astro";
+import { Image } from "astro:assets";
+import imgObas01 from "../../imgs/obas-01.jpg";
+import imgMako54_02 from "../../imgs/mako54-02.jpg";
 ---
 
 <MainLayout>
@@ -21,61 +23,69 @@ import Footer from "../../components/Footer.astro";
     </div>
     <div class="bg-amber-200 h-6 w-full"></div>
 
-    <section class="my-16 sm:my-32">
-        <div
-            class="block sm:flex justify-center w-full lg:w-2/5 mx-auto gap-16"
-        >
-            <div class="w-full sm:w-1/2 space-y-5 px-16 lg:px-0">
-                <h4 class="font-semibold max-w-96">
-                    We’d love to hear from you.
-                    <br />Just choose the most convenient method and we’ll get
-                    back to you as soon as we can.
-                </h4>
-                <div>
-                    <div>10 Street Name, City Name</div>
-                    <div>Country, Zip code</div>
-                </div>
-                <div>
-                    <div>555 555 555</div>
-                    <div>example@mail.com</div>
-                </div>
-                <div class="flex gap-3 mt-5">
-                    <Icon name="facebook" class="text-amber-400" size={24} />
-                    <Icon name="x" class="text-amber-400" size={24} />
-                    <Icon name="instagram" class="text-amber-400" size={24} />
+    <section class="my-16 sm:my-32 px-4 md:px-16">
+        <div class="block sm:flex gap-16 sm:justify-between">
+            <div class="w-full sm:w-1/2">
+                <h1
+                    class="font-serif text-blue-600 text-5xl sm:text-7xl tracking-widest font-bold"
+                >
+                    Descubre
+                </h1>
+                <div class="ml-8 -mt-1">
+                    <h1 class="font-thin text-3xl sm:text-5xl mt-1 uppercase">
+                        Aventuras en Tepic
+                    </h1>
+                    <div class="flex justify-center gap-2 lg:gap-16 mt-2">
+                        <a href="https://hotels.cloudbeds.com/es/reservation/RG3OL7" target="_blank">
+                            <Button>Mako 235</Button> 
+                        </a>
+                        <a href="https://hotels.cloudbeds.com/reservation/WEu6yV" target="_blank">
+                            <Button>Mako 519</Button>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="w-full sm:w-1/2 mt-16 sm:mt-0 px-8 lg:px-0 ">
-                <form class="space-y-4">
-                    <input
-                        type="text"
-                        placeholder="Nombre"
-                        class="py-2 px-4 w-full bg-gray-100"
-                    />
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        class="py-2 px-4 w-full bg-gray-100"
-                    />
-                    <input
-                        type="text"
-                        placeholder="Teléfono"
-                        class="py-2 px-4 w-full bg-gray-100"
-                    />
-                    <input
-                        type="text"
-                        placeholder="Mensaje"
-                        class="py-2 px-4 w-full bg-gray-100"
-                    />
+            <div
+                class="bg-mostaza w-3/4 ml-auto mt-8 h-96 sm:h-auto sm:ml-16 sm:w-1/3 sm:-mt-8 relative"
+            >
+                <Image
+                    src={imgMako54_02}
+                    alt="Foto 02"
+                    class="w-full lg:h-72 lg:object-cover object-bottom lg:overflow-hidden absolute top-4 sm:top-12 -left-4"
+                />
+            </div>
+        </div>
+    </section>
 
-                    <Button type="submit">Enviar</Button>
-                </form>
+    <section class="my-16 md:my-32 px-0 md:px-16">
+        <div class="block md:flex justify-center mx-auto max-w-[1440px]">
+            <div class="bg-mostaza mt-8 xl:-mt-8 relative mx-auto w-[250px] h-24 sm:w-[350px] sm:h-32 md:h-auto md:w-[600px]">
+                <Image
+                    src={imgObas01}
+                    alt="Foto 02"
+                    class="w-full h-28 md:h-64 xl:96 object-cover object-center overflow-hidden absolute -top-8 -left-4"
+                />
+            </div>
+            <div class="ml-0 md:ml-32 w-full lg:w-4/6 max-w-3xl px-4 md:px-0">
+                <h1
+                    class="font-serif text-blue-600 text-5xl sm:text-7xl tracking-widest font-bold"
+                >
+                    Atrévete
+                </h1>
+                <h1 class="font-thin text-3xl sm:text-5xl mt-1 uppercase">
+                    A explorar Puerto Vallarta
+                </h1>
+                <div class="flex justify-center gap-2 lg:gap-16 mt-2">
+                    <a href="https://hotels.cloudbeds.com/reservation/MPmmBg" target="_blank">
+                        <Button>Mako 54</Button>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.1683774117505!2d-105.22612158293595!3d20.621992556890397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842145e5bf332f0d%3A0x145b84a6b8b1f52a!2sMako%2054%20-%20Apartments%20for%20rent!5e0!3m2!1ses!2smx!4v1727741338986!5m2!1ses!2smx"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1040.6572920014858!2d-104.85588780983564!3d21.477657024491567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1728606875501!5m2!1ses-419!2smx"
         class="w-full h-96"
         style="border:0;"
         allowfullscreen=""
