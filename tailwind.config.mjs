@@ -11,7 +11,7 @@ export default {
 			},
 			colors: {
 				primario: "#B5A291",
-				secundario: "#5D2E46",
+				secundario: "#936761",
 				terciario: "#007991",
 				secundarioDark: "#00171F",
 				secundarioLight: "#B8F2E6",
