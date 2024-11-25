@@ -19,130 +19,86 @@ import Gallery from "../../components/Gallery.astro";
         <!-- Overlay -->
         <div class="absolute inset-0 bg-black bg-opacity-50 -z-10"></div>
     </div>
-    <div class="bg-amber-200 h-6 w-full"></div>
+    <div class="bg-primario/60 h-6 w-full"></div>
 
-    <section class="mt-20 mb-64">
-        <div class="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto gap-5 px-4 lg:px-0">
-            <div class="border border-gray-300">
-                <div
-                    class="bg-[url('/images/mako-54.jpg')] bg-cover bg-bottom w-full h-64"
-                >
-                </div>
-                <div class="px-8 pb-16 mt-14">
-                    <h3 class="uppercase text-blue-600 text-2xl">Mako 54</h3>
-                    <h4 class="uppercase font-bold text-base">
-                        6 Habitaciones
-                    </h4>
-                    <p class="w-11/12 mb-3">
-                        A tan sólo unas cuantas cuadras de la playa se encuentra Mako 54, 
-                        rodeado de atractivas propuestas y ubicado en la icónica colonia 5 de Diciembre, 
-                        en Puerto Vallarta.
-                    </p>
-
-                    <a href="https://hotels.cloudbeds.com/reservation/MPmmBg" target="_blank">
-                        <Button>Reservar ahora</Button>
-                    </a>
-                    <!-- Componente de la galería -->
-                    <Gallery 
-                    images={[
-                        { 
-                            fullSrc: "/images/mako54/mako54_g01.jpg", 
-                            thumbnailSrc: "/images/mako54/mako54_t01.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako54/mako54_g02.jpg", 
-                            thumbnailSrc: "/images/mako54/mako54_t02.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako54/mako54_g03.jpg", 
-                            thumbnailSrc: "/images/mako54/mako54_t03.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako54/mako54_g04.jpg", 
-                            thumbnailSrc: "/images/mako54/mako54_t04.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako54/mako54_g05.jpg", 
-                            thumbnailSrc: "/images/mako54/mako54_t05.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako54/mako54_g06.jpg", 
-                            thumbnailSrc: "/images/mako54/mako54_t06.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        }
-                      ]}
-                    />
-                </div>
+    <section class="mt-20 mb-64 container mx-auto">
+        <div class="w-full sm:w-1/2 mb-8">
+            <h1
+                class="font-serif text-terciario text-5xl sm:text-7xl tracking-widest font-bold"
+            >
+                Tepic
+            </h1>
+            <div class="ml-8 -mt-1">
+                <h1 class="font-thin text-3xl sm:text-5xl mt-1 uppercase">
+                    Descubre
+                </h1>
+                <p class="my-5">El encanto de la bella Ciudad de Tepic.</p>
             </div>
+        </div>
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto gap-5 px-4 lg:px-0"
+        >
             <div class="border border-gray-300">
                 <div
                     class="bg-[url('/images/mako-235.jpg')] bg-cover bg-bottom w-full h-64"
                 >
                 </div>
                 <div class="px-8 pb-16 mt-14">
-                    <h3 class="uppercase text-blue-600 text-2xl">Mako 235</h3>
+                    <h3 class="uppercase text-terciario text-2xl">Mako 235</h3>
                     <h4 class="uppercase font-bold text-base">
                         21 Habitaciones
                     </h4>
                     <p class="w-11/12 mb-3">
-                        Ubicado en el Fracc. Parque Ecológico de Tepic, 
-                        es el lugar ideal para aquellos que buscan un hogar rodeado de naturaleza 
-                        sin renunciar al confort y la modernidad.
+                        Ubicado en el Fracc. Parque Ecológico de Tepic, es el
+                        lugar ideal para aquellos que buscan un hogar rodeado de
+                        naturaleza sin renunciar al confort y la modernidad.
                     </p>
 
-                    <a href="https://hotels.cloudbeds.com/es/reservation/RG3OL7" target="_blank">
+                    <a
+                        href="https://hotels.cloudbeds.com/es/reservation/RG3OL7"
+                        target="_blank"
+                    >
                         <Button>Reservar ahora</Button>
                     </a>
                     <!-- Componente de la galería -->
-                    <Gallery 
-                    images={[
-                        { 
-                            fullSrc: "/images/mako235/mako235_g01.jpg", 
-                            thumbnailSrc: "/images/mako235/mako235_t01.jpg",
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako235/mako235_g02.jpg", 
-                            thumbnailSrc: "/images/mako235/mako235_t02.jpg",
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako235/mako235_g03.jpg", 
-                            thumbnailSrc: "/images/mako235/mako235_t03.jpg",
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako235/mako235_g04.jpg", 
-                            thumbnailSrc: "/images/mako235/mako235_t04.jpg",
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako235/mako235_g05.jpg", 
-                            thumbnailSrc: "/images/mako235/mako235_t05.jpg",
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako235/mako235_g06.jpg", 
-                            thumbnailSrc: "/images/mako235/mako235_t06.jpg",
-                            width: 1024, 
-                            height: 768 
-                        }
+                    <Gallery
+                        images={[
+                            {
+                                fullSrc: "/images/mako235/mako235_g01.jpg",
+                                thumbnailSrc: "/images/mako235/mako235_t01.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako235/mako235_g02.jpg",
+                                thumbnailSrc: "/images/mako235/mako235_t02.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako235/mako235_g03.jpg",
+                                thumbnailSrc: "/images/mako235/mako235_t03.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako235/mako235_g04.jpg",
+                                thumbnailSrc: "/images/mako235/mako235_t04.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako235/mako235_g05.jpg",
+                                thumbnailSrc: "/images/mako235/mako235_t05.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako235/mako235_g06.jpg",
+                                thumbnailSrc: "/images/mako235/mako235_t06.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
                         ]}
                     />
                 </div>
@@ -153,58 +109,145 @@ import Gallery from "../../components/Gallery.astro";
                 >
                 </div>
                 <div class="px-8 pb-16 mt-14">
-                    <h3 class="uppercase text-blue-600 text-2xl">Mako 519</h3>
+                    <h3 class="uppercase text-terciario text-2xl">Mako 519</h3>
                     <h4 class="uppercase font-bold text-base">
                         10 Habitaciones
                     </h4>
                     <p class="w-11/12 mb-3">
-                        Ubicado en Calle Revolución Social #519, en la colonia Menchaca de Tepic, 
-                        Nayarit, se encuentra este inmueble tipo loft equipado para ser tu hogar 
-                        durante tu estancia.
+                        Ubicado en Calle Revolución Social #519, en la colonia
+                        Menchaca de Tepic, Nayarit, se encuentra este inmueble
+                        tipo loft equipado para ser tu hogar durante tu
+                        estancia.
                     </p>
 
-                    <a href="https://hotels.cloudbeds.com/reservation/WEu6yV" target="_blank">
+                    <a
+                        href="https://hotels.cloudbeds.com/reservation/WEu6yV"
+                        target="_blank"
+                    >
                         <Button>Reservar ahora</Button>
                     </a>
                     <!-- Componente de la galería -->
-                    <Gallery 
-                    images={[
-                        { 
-                            fullSrc: "/images/mako519/mako519_g01.jpg", 
-                            thumbnailSrc: "/images/mako519/mako519_t01.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako519/mako519_g02.jpg", 
-                            thumbnailSrc: "/images/mako519/mako519_t02.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako519/mako519_g03.jpg", 
-                            thumbnailSrc: "/images/mako519/mako519_t03.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako519/mako519_g04.jpg", 
-                            thumbnailSrc: "/images/mako519/mako519_t04.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako519/mako519_g05.jpg", 
-                            thumbnailSrc: "/images/mako519/mako519_t05.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        },
-                        { 
-                            fullSrc: "/images/mako519/mako519_g06.jpg", 
-                            thumbnailSrc: "/images/mako519/mako519_t06.jpg", 
-                            width: 1024, 
-                            height: 768 
-                        }
+                    <Gallery
+                        images={[
+                            {
+                                fullSrc: "/images/mako519/mako519_g01.jpg",
+                                thumbnailSrc: "/images/mako519/mako519_t01.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako519/mako519_g02.jpg",
+                                thumbnailSrc: "/images/mako519/mako519_t02.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako519/mako519_g03.jpg",
+                                thumbnailSrc: "/images/mako519/mako519_t03.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako519/mako519_g04.jpg",
+                                thumbnailSrc: "/images/mako519/mako519_t04.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako519/mako519_g05.jpg",
+                                thumbnailSrc: "/images/mako519/mako519_t05.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako519/mako519_g06.jpg",
+                                thumbnailSrc: "/images/mako519/mako519_t06.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                        ]}
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-1/2 mb-8 mt-16">
+            <h1
+                class="font-serif text-terciario text-5xl sm:text-7xl tracking-widest font-bold"
+            >
+                Puerto Vallarta
+            </h1>
+            <div class="ml-8 -mt-1">
+                <h1 class="font-thin text-3xl sm:text-5xl mt-1 uppercase">
+                    Explora
+                </h1>
+                <p class="my-5">El increíble puerto jalisciense.</p>
+            </div>
+        </div>
+
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto gap-5 px-4 lg:px-0"
+        >
+            <div class="border border-gray-300">
+                <div
+                    class="bg-[url('/images/mako-54.jpg')] bg-cover bg-bottom w-full h-64"
+                >
+                </div>
+                <div class="px-8 pb-16 mt-14">
+                    <h3 class="uppercase text-terciario text-2xl">Mako 54</h3>
+                    <h4 class="uppercase font-bold text-base">
+                        6 Habitaciones
+                    </h4>
+                    <p class="w-11/12 mb-3">
+                        A tan sólo unas cuantas cuadras de la playa se encuentra
+                        Mako 54, rodeado de atractivas propuestas y ubicado en
+                        la icónica colonia 5 de Diciembre, en Puerto Vallarta.
+                    </p>
+                    <a
+                        href="https://hotels.cloudbeds.com/reservation/MPmmBg"
+                        target="_blank"
+                    >
+                        <Button>Reservar ahora</Button>
+                    </a>
+                    <!-- Componente de la galería -->
+                    <Gallery
+                        images={[
+                            {
+                                fullSrc: "/images/mako54/mako54_g01.jpg",
+                                thumbnailSrc: "/images/mako54/mako54_t01.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako54/mako54_g02.jpg",
+                                thumbnailSrc: "/images/mako54/mako54_t02.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako54/mako54_g03.jpg",
+                                thumbnailSrc: "/images/mako54/mako54_t03.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako54/mako54_g04.jpg",
+                                thumbnailSrc: "/images/mako54/mako54_t04.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako54/mako54_g05.jpg",
+                                thumbnailSrc: "/images/mako54/mako54_t05.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
+                            {
+                                fullSrc: "/images/mako54/mako54_g06.jpg",
+                                thumbnailSrc: "/images/mako54/mako54_t06.jpg",
+                                width: 1024,
+                                height: 768,
+                            },
                         ]}
                     />
                 </div>
