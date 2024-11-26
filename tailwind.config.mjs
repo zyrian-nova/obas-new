@@ -10,7 +10,11 @@ export default {
 				sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
-				mostaza: "#ceb257"
+				primario: "#B5A291",
+				secundario: "#936761",
+				terciario: "#007991",
+				secundarioDark: "#00171F",
+				secundarioLight: "#B8F2E6",
 			}
 		},
 	},
